@@ -1,0 +1,111 @@
+# Permanent URL redirect 
+
+Redirect 301 http://twpblog.warriorpointe.org/ahorse.html http://www.warriorpointe.org/anchor/posts/i-saw-a-man-about-a-horse
+
+
+# ----------------------------------------------------------------------
+# Custom Errors page
+# ----------------------------------------------------------------------
+# You can add custom pages to handle 500 or 403 pretty easily, if you like.
+# If you are hosting your site in subdirectory, adjust this accordingly
+#    e.g. ErrorDocument 404 /subdir/404.html
+ErrorDocument 307 /307_TEMPORARY_REDIRECT
+ErrorDocument 400 /400_BAD_REQUEST
+ErrorDocument 401 /401_UNAUTHORIZED
+ErrorDocument 403 /403_FORBIDDEN
+ErrorDocument 404 /error404.html
+
+ErrorDocument 500 /500_INTERNAL_SERVER_ERROR
+
+#
+#
+# STRONG HTACCESS PROTECTION
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</Files>
+
+# pass the default character set
+AddDefaultCharset utf-8
+
+# REDIRECT SPAMMER ATTACKS TO BOGUS SITE
+
+
+#BLOCK BROWSER ACCESS TO LOG FILES
+<Files  ~ "\.log$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+
+Options -indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /anchor
+
+	# Allow any files or directories that exist to be displayed directly
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	# Rewrite all other URLs to index.php/URL
+	RewriteRule ^(.*)$ index.php?/$1 [L]
+	
+	
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} http\:\/\/www\.google\.com\/humans\.txt\? [NC]
+RewriteRule .* - [F,L]
+</IfModule>
+
+
+
+<Files *>
+Order Allow,Deny
+Allow from all
+Deny from 10.1.3.0/24
+Deny from example.com
+Deny from another-example.com
+Deny from traffic2money.com
+Deny from seo-platform.com
+Deny from get-free-social-traffic.com
+Deny from qualitymarketzone.com
+Deny from free-floating-buttons.com
+Deny from best-seo-software.xyz
+Deny from sexyali.com
+Deny from hongfanji.com
+Deny from rednise.com
+Deny from r.com
+Deny from 4webmasters.org
+Deny from 176-8-91-248-lvv.broadband.kyivstar.net
+Deny from zt113.tfbnw.net
+Deny from bn-in.fb.me
+Deny from ihomerent.com
+Deny from w3snoop.com
+Deny from rosban.su
+Deny from freesex.com
+</Files>
+
+# Block Russian Referrer Spam
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly.\.ru/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.org/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.info/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*iloveitaly\.ru/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*econom\.co/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*savetubevideo\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*kambasoft\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*buttons\-for\-website\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*semalt\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*darodar\.com/ [NC]
+RewriteRule ^(.*)$ – [F,L]
+
+RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.ru/? [NC]
+Rewriterule ^(.*)$ https://www.google.com [r=307,NC]
+
+RewriteCond %{HTTP_REFERER} ^http?://[^/]+\.ru/? [NC]
+Rewriterule ^(.*)$ https://www.google.com [r=307,NC]

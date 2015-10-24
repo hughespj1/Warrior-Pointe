@@ -1,0 +1,245 @@
+.hidden {
+    display: none;
+}
+.hide {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#centeredheader {
+    width: 100%;
+    float: left;
+    margin: 0 auto 64px;
+    padding: 0;
+}
+#centeredheader .central .inner {
+    width: 660px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+#centeredheader .central .inner h1 {
+    font-family: 'Raleway-Light';
+    font-size: 4.4em;
+    line-height: 1.23em;
+    color: #2f353e;
+    font-weight: 300;
+    margin: 0 0 16px;
+}
+#centeredheader .central .inner p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    float: left;
+    margin: 0 auto 26px;
+}
+#centeredheader .central .inner a.button {
+    font-family: 'Raleway-Light';
+    font-size: 1.2em;
+    line-height: 1.667em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .03em;
+    color: #19a9e5;
+    border: 2px solid #19a9e5;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 156px;
+    float: left;
+    margin: 0 252px 0;
+    text-align: center;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#centeredheader .central .inner a.button:hover {
+    background: #19a9e5;
+    border: 2px solid #19a9e5;
+    color: #fff;
+    text-shadow: 0 1px 0 #1698ce;
+}
+.department {
+    padding: 24px 0 0;
+}
+
+.department h4 {
+    font-family: 'Raleway-Light';
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #adb3b9;
+    width: 100%;
+    float: left;
+    padding: 0 0 8px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid #e0e5e9;
+}
+.department h4 span {
+    float: right;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: .03em;
+}
+.department h4 span a {
+    font-style: italic;
+}
+.department ul.team {
+    float: left;
+    margin: 0 auto;
+    padding: 0;
+    width: 985px;
+    position: relative;
+}
+.department ul.team li.member {
+    float: left;
+    background: #000;
+    width: 235px;
+    margin: 0 15px 15px 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: table;
+ font-family: 'Raleway-Light';
+    font-size: 1em;
+
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.department ul.team li.member:nth-child(4n) {
+    margin-right: 0;
+}
+.department ul.team li.member:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #19a9e5;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.department ul.team li.member .profile {
+    position: absolute;
+    width: 235px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0;
+}
+.department ul.team li.member .profile img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+.department ul.team li.member .info {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+    -moz-transition: -moz-transform .3s ease-out, opacity .3s linear;
+    -o-transition: -o-transform .3s ease-out, opacity .3s linear;
+    -webkit-transition: -webkit-transform .3s ease-out, opacity .3s linear;
+    transition: transform .3s ease-out, opacity .3s linear;
+}
+.department ul.team li.member h2 {
+    font-family: 'Raleway-Light';
+	font-size:25px;
+    color: #fff;
+    text-align: center;
+
+}
+.department ul.team li.member h3 {
+    font-family: 'Raleway-Light';
+    font-size:14px;
+    color: #f6f6f8;
+    text-align: center;
+	
+}
+.department ul.team li.member .elsewhere {
+    float: right;
+    position: relative;
+    left: -50%;
+    text-align: center;
+    width: auto;
+   
+}
+.department ul.team li.member .elsewhere ul.links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    left: 50%}
+.department ul.team li.member .elsewhere ul.links li {
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: 0;
+}
+.department ul.team li.member .elsewhere ul.links li:last-child {
+    margin-right: 0;
+}s
+.department ul.team li.member .elsewhere ul.links li a.twitter {
+    background: url('') 0 -120px no-repeat;
+    background-size: 30px 180px;
+}
+.department ul.team li.member .elsewhere ul.links li a.twitter:hover {
+    background-position: 0 -150px;
+}
+.department ul.team li.member .elsewhere ul.links li a.web {
+    background: url('') 0 0 no-repeat;
+    background-size: 30px 180px;
+}
+.department ul.team li.member .elsewhere ul.links li a.web:hover {
+    background-position: 0 -30px;
+}
+.department ul.team li.member:hover:before, .department ul.team li.member:target:before {
+    opacity: .8;
+}
+.department ul.team li.member:hover img, .department ul.team li.member:target img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.department ul.team li.member:hover .info, .department ul.team li.member:target .info {
+    opacity: 1;
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -moz-transition: -moz-transform .3s ease-out, opacity .3s linear;
+    -o-transition: -o-transform .3s ease-out, opacity .3s linear;
+    -webkit-transition: -webkit-transform .3s ease-out, opacity .3s linear;
+    transition: transform .3s ease-out, opacity .3s linear;
+}
